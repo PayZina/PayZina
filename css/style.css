@@ -1,0 +1,389 @@
+/* 
+---------------------------------------------
+Table of contents
+---------------------------------------------
+01. global styles
+02. Hero Section
+03. Work ShowCase Section
+04. Testimonials Section 
+05. Footer 
+--------------------------------------------- 
+*/
+
+/* 
+---------------------------------------------
+global styles
+--------------------------------------------- 
+*/
+
+@import url('./background.css');
+@import url('./testimonials.css');
+@import url('./latest-news.css');
+
+:root {
+    --main-color: #b85c23;
+    --main-hover-color: #964b1d;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+/* 
+---------------------------------------------
+Hero Section
+--------------------------------------------- 
+*/
+
+#navbarText>ul {
+    display: none !important;
+}
+
+li.btn.btn-outline-warning:hover a {
+    color: #FFF !important;
+}
+
+
+section {
+    background: transparent;
+}
+
+#hero {
+    & ul li {
+        list-style: none;
+    }
+
+    & ul {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+#hero-btns a {
+    padding: 15px 28px !important;
+    font-size: 1.1rem !important;
+}
+
+.fa-telegram {
+    color: #2da7d8;
+}
+
+.fa-facebook {
+    color: #3b5998;
+}
+
+.fa-whatsapp {
+    color: #57eb64;
+}
+
+.fa-envelope {
+    color: #e44841;
+}
+
+.animate-charcter {
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg,
+            #231557 0%,
+            #44107a 29%,
+            #ff1361 67%,
+            #fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 3s linear infinite;
+    display: inline-block;
+    font-size: 3rem;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.animate-text {
+    background-image: linear-gradient(45deg,
+            #b85c23 0%,
+            #ffc105 29%,
+            #5d5659 67%,
+            #ffc105 100%);
+    background-size: 200% 200%;
+    background-clip: border-box;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textAnimate 9s linear infinite;
+}
+
+@keyframes textAnimate {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+
+/* 
+---------------------------------------------
+Work ShowCase Section
+--------------------------------------------- 
+*/
+
+#work-showcase {
+    margin: 140px 0px !important;
+}
+
+#work-showcase .cards {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#work-title span {
+    position: relative;
+}
+
+#work-title span::before {
+    content: '';
+    position: absolute;
+    width: 110%;
+    height: 165%;
+    top: -11px;
+    left: -6px;
+    background-color: #FFF;
+    border-radius: 15px;
+    z-index: -1;
+    transform: rotate(13deg);
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    padding: 25px 10px;
+    background-color: rgba(255, 255, 255, 0.555);
+    border-radius: 8px;
+    width: 85%;
+    margin: 0px auto;
+    border: 1px solid #CCC;
+}
+
+.cards div .blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+.cards div:nth-child(1) .blur {
+    background-image: url('../imgs/perfectMoney.png');
+}
+
+.cards div:nth-child(2) .blur {
+    background-image: url('../imgs/usdt.png');
+}
+
+.cards div:nth-child(3) .blur {
+    background-image: url('../imgs/skrill.png');
+}
+
+.cards div:nth-child(4) .blur {
+    background-image: url('../imgs/payeer.png');
+}
+
+.cards div:nth-child(5) .blur {
+    background-image: url('../imgs/redToPay.jpeg');
+}
+
+.card h3 {
+    position: relative;
+    z-index: 1;
+    color: #FFF;
+}
+
+.card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0px auto;
+    margin-bottom: 10px;
+}
+
+/* 
+---------------------------------------------
+Testimonials Section
+--------------------------------------------- 
+*/
+
+.testimonials {
+    margin-top: 80px !important;
+}
+
+.testimonials .container .title {
+    padding: 20px !important;
+}
+
+.testimonials .container .title h2 {
+    font-size: 2rem !important;
+}
+
+/* 
+---------------------------------------------
+Footer
+--------------------------------------------- 
+*/
+
+footer {
+    /* width: 60%; */
+    margin: 80px auto;
+
+    & a {
+        text-decoration: none;
+        -moz-text-decoration-style: none;
+    }
+
+    & p {
+        padding: 20px;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: all 0.3s linear;
+
+    }
+
+    & p:hover {
+        background-color: var(--main-hover-color);
+    }
+
+    & .icons a {
+        background-color: var(--main-hover-color);
+        border-radius: 8px;
+        padding: 5px;
+        color: #FFF;
+    }
+}
+
+/* 
+---------------------------------------------
+Small Devices
+--------------------------------------------- 
+*/
+@media(min-width:576px) {}
+
+
+/* 
+---------------------------------------------
+Medium Devices
+--------------------------------------------- 
+*/
+@media(min-width:768px) {
+
+    /* 
+    ---------------------------------------------
+    (Medium) Work ShowCase Section
+    --------------------------------------------- 
+    */
+    .card {
+        width: calc((100% / 2) - 10px);
+    }
+
+    /* 
+    ---------------------------------------------
+    (Medium) Testimonials Section
+    --------------------------------------------- 
+    */
+    .testimonials .container .title h2 {
+        font-size: 2.85rem !important;
+    }
+}
+
+/* 
+---------------------------------------------
+Large Devices
+--------------------------------------------- 
+*/
+@media(min-width:992px) {
+
+    /* 
+    ---------------------------------------------
+    (Large) Hero Section
+    --------------------------------------------- 
+    */
+    .navbar-brand {
+        display: none !important;
+    }
+
+    #navbarText>ul {
+        display: flex !important;
+    }
+
+    .navbar-nav li:hover a svg {
+        animation-name: iconScale;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes iconScale {
+        0% {
+            transform: scale(1) rotate(5deg);
+        }
+
+        25% {
+            transform: scale(1.15) rotate(10deg);
+        }
+
+        50% {
+            transform: scale(1.175) rotate(12.5deg);
+        }
+
+        100% {
+            transform: scale(1.2) rotate(15deg);
+        }
+    }
+
+    /* 
+    ---------------------------------------------
+    (Large) Work ShowCase Section
+    --------------------------------------------- 
+    */
+    .card {
+        width: calc((100% / 3) - 15px);
+    }
+
+}
+
+/* 
+---------------------------------------------
+Extra Large Devices
+--------------------------------------------- 
+*/
+@media(min-width:1200px) {}
